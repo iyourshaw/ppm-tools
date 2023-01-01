@@ -1,0 +1,16 @@
+
+plugins {
+    id 'ppm-tools.java-application-conventions'
+}
+
+dependencies {
+    implementation project(':ppm-tools-lib')
+}
+
+application {
+    // Define the main class for the application.
+    mainClass = 'gov.codot.ppmtools.Gpkg2PpmCommand'
+}
+
+
+

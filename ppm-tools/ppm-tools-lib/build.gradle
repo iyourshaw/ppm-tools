@@ -1,0 +1,8 @@
+plugins {
+    id 'ppm-tools.java-library-conventions'
+
+    // Lombok plugin https://projectlombok.org/setup/gradle
+    id 'io.freefair.lombok' version '6.6.1'
+}
+
+

@@ -1,0 +1,13 @@
+# IDE settings
+.settings/
+.vscode/
+.idea/
+.project
+
+# Gradle settings
+.gradle/
+
+# Build output
+build/
+bin/
+tmp/

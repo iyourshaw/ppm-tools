@@ -1,0 +1,9 @@
+plugins {
+    id 'ppm-tools.java-common-conventions'
+    id 'application'
+}
+
+dependencies {
+    // Command Line Interface
+    implementation 'info.picocli:picocli:4.7.0'
+}

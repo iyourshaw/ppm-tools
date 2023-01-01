@@ -1,0 +1,15 @@
+plugins {
+    id 'ppm-tools.java-common-conventions'
+    id 'java-library'
+}
+
+dependencies {
+    // Geotools
+    api "org.geotools:gt-main:${geotoolsVersion}"
+    api "org.geotools:gt-geopkg:${geotoolsVersion}"
+    api "org.geotools:gt-epsg-hsql:${geotoolsVersion}"
+    api "org.geotools:gt-cql:${geotoolsVersion}"
+    api "org.geotools:gt-xml:${geotoolsVersion}"
+    api "org.locationtech.jts:jts-core:1.18.2"
+}
+

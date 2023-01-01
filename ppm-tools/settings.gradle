@@ -1,0 +1,2 @@
+rootProject.name = 'ppm-tools'
+include('ppm-tools-lib', 'gpkg2ppm', 'ppm2geojson')

@@ -1,0 +1,9 @@
+# UNSET automatic CRLF conversion
+* -text
+
+# Binary file types
+*.exe binary
+*.dll binary
+*.zip binary
+*.gpkg binary
+*.bat binary

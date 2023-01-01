@@ -1,0 +1,56 @@
+plugins {
+    id 'java'
+
+
+    // JaCoCo code coverage plugin: https://docs.gradle.org/current/userguide/jacoco_plugin.html
+    id 'jacoco'
+
+}
+
+ext {
+    geotoolsVersion = '28.0'
+}
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(11)
+    }
+}
+
+repositories {
+
+    // Repository for Geotools/JTS
+    maven {
+        url 'https://repo.osgeo.org/repository/release/'
+    }
+
+    // For everything else
+    mavenCentral()
+
+    // For geojson tool
+    mavenLocal()
+}
+
+dependencies {
+    // Use JUnit Jupiter for testing.
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.7.1'
+    testImplementation 'org.junit.jupiter:junit-jupiter-params:5.7.1'
+    testImplementation group: 'org.hamcrest', name: 'hamcrest', version: '2.2'
+
+    // Utilities
+    implementation 'com.google.guava:guava:30.1.1-jre'
+    implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
+
+    // Geojson tool from https://github.com/iyourshaw/jts2geojson
+    implementation 'gov.codot:jts2geojson:1.0-SNAPSHOT'
+}
+
+test {
+    // Use JUnit Platform for unit tests.
+    useJUnitPlatform()
+    finalizedBy jacocoTestReport    // Always generate coverate report after tests
+}
+
+jacocoTestReport {
+    dependsOn test  // Makes sure tests have been run before generating coverage report
+}
