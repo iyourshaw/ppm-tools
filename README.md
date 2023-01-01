@@ -1,7 +1,7 @@
 # Introduction 
 Tools for working with the "map file" format that the ODE PPM uses to represent geofences.
 
-* `scripts` - Shell scripts that open source geospatial tools to downloading Open Street Map data and convert it to Geopackage format.
+* `scripts` - Shell scripts that use open source geospatial tools to download Open Street Map data and convert it to Geopackage format.
 * `ppm-tools` - Java command line tools:
     * `gpkg2ppm` - Tool for extracting Open Street Map road geometries from a Geopackage database and converting them into the "map file" format used by the ODE PPM module.
     * `ppm2geojson` - Tool for interconverting between PPM map files and Geojson.
@@ -10,9 +10,10 @@ Tools for working with the "map file" format that the ODE PPM uses to represent 
 
 ## PPM Map file format
 The map file format used by the PPM for geofencing is defined here:
+
 [PPM User Manual (Word Document)](https://github.com/usdot-jpo-ode/jpo-cvdp/blob/master/docs/ppm_user_manual.docx)
 
-The file format as used by the PPM moduel is equivalent to an ordered collection of line edges.
+The file format as used by the PPM modue is equivalent to an ordered collection of line edges.
 
 The format consists of a CSV file with four fields:
 
