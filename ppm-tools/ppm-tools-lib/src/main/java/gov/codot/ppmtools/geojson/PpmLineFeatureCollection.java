@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.wololo.geojson.BaseFeatureCollection;
 
-import org.wololo.geojson.GeoJSONFactory;
 
 import java.io.File;
 import java.io.IOException;

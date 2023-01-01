@@ -5,7 +5,6 @@ import gov.codot.ppmtools.geojson.PpmLineFeatureCollection;
 
 import java.io.*;
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * A collection of PpmLine objects.

@@ -2,10 +2,8 @@ package gov.codot.ppmtools.mapfile;
 
 import gov.codot.ppmtools.geojson.PpmLineFeature;
 import gov.codot.ppmtools.geojson.PpmLineProperties;
-import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
-import lombok.ToString;
 import org.locationtech.jts.geom.CoordinateXY;
 import org.wololo.geojson.LineString;
 
@@ -46,9 +44,7 @@ public class PpmLine
         long minId = this.stream()
                         .map(edge -> edge.getGeography().getId1()).min(Comparator.comparingLong(i -> i))
                         .orElseThrow();
-        props.setFirstId(minId);
         long maxId = maxId();
-        props.setLastId(maxId);
 
         var coords = new ArrayList<double[]>();
         PpmEdge firstEdge = this.get(0);
