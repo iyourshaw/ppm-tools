@@ -13,7 +13,7 @@ The map file format used by the PPM for geofencing is defined here:
 
 [PPM User Manual (Word Document)](https://github.com/usdot-jpo-ode/jpo-cvdp/blob/master/docs/ppm_user_manual.docx)
 
-The file format as used by the PPM modue is equivalent to an ordered collection of line edges.
+The file format as used by the PPM module is equivalent to an ordered collection of line edges.
 
 The format consists of a CSV file with four fields:
 
@@ -41,7 +41,7 @@ The `way_id` is effectively a human readable identifier for a road segment.
 
 
 
-## Prerequesites:
+## Prerequisites:
 * Bash shell
     * Built into any Linux disto 
     * On Windows: the Git Bash shell from Git for Windows: https://git-scm.com/download/win or from Cygwin: https://www.cygwin.com/install.html
@@ -54,7 +54,12 @@ The `way_id` is effectively a human readable identifier for a road segment.
 * GDAL (includes the ogr2ogr tool)
     * See the documentation for the ogr2ogr tool at https://gdal.org/programs/ogr2ogr.html
     * Version: 3.2.1, released 2020/12/29, or later.
-    * Linux: apt install gdal
+    * Ubuntu Linux:
+    ```bash
+      sudo add-apt-repository ppa:ubuntugis/ppa
+      sudo apt update
+      sudo apt install gdal-bin
+    ```
     * Windows: install from OSGeo4W: https://www.osgeo.org/projects/osgeo4w/, or bundled with QGIS (OSGeo4W Network Installer at https://www.qgis.org/en/site/forusers/download.html)
     * (untested) Docker: Probably might need the full version osgeo/gdal:ubuntu-full-latest to include the OSM stuff? https://github.com/OSGeo/gdal/tree/master/gdal/docker
 * Osmosis
