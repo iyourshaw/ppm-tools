@@ -165,3 +165,5 @@ The geojson file can then be edited, for example using QGIS, and then converted 
 ppm2geojson/bin/ppm2geojson -i CO-motorways.geojson -o CO-motorways-edited.edges -g
 ```
 
+## Unit Tests
+TODO Document unit tests and coverage statistics.
