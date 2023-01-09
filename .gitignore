@@ -11,3 +11,15 @@
 build/
 bin/
 tmp*/
+
+# Exclude generated geospatial file types
+*.pbf
+*.gpkg
+*.edges
+*.geojson
+
+# Don't exclude example geospatial files in data folder
+!/data/*.pbf
+!/data/*.edges
+!/data/*.gpkg
+

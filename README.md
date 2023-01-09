@@ -88,8 +88,8 @@ extract_motorways.sh
 import_to_gpkg.sh
 ```
 
-### Command Line Tools
-Either download the gpkg2ppm.zip and ppm2geojson.zip tools from the distribution or build them from source as follows:
+## Command Line Tools
+
 
 ### Building from source
 From within the `ppm-tools/ppm-tools` directory, build the tools using Gradle:
