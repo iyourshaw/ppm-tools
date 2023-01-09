@@ -41,8 +41,7 @@ dependencies {
     implementation 'com.google.guava:guava:30.1.1-jre'
     implementation group: 'commons-beanutils', name: 'commons-beanutils', version: '1.9.4'
 
-    // Geojson tool from https://github.com/iyourshaw/jts2geojson
-    implementation 'gov.codot:jts2geojson:1.0-SNAPSHOT'
+
 }
 
 test {

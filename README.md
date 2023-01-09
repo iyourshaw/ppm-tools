@@ -74,7 +74,6 @@ The `way_id` is effectively a human readable identifier for a road segment.
 
 ### Build dependencies:
 * GeoTools/JTS
-* JTS2Geojson tool (https://github.com/iyourshaw/jts2geojson)
 * PicoCLI
 * JUnit Jupiter
 * Guava
@@ -133,7 +132,7 @@ file for the ODE PPM
 
 To generate an edge file for I-70, I-25, and CO-470, including express lanes and the toll road, copy the `colorado-latest-motorways.osm.gpkg` file to `gpkg2ppm/bin` directory and execute the following command line:
 ```bash
-./gpkg2ppm-cli -o CO-motorways.edges -r='I 25' -r='I 25 Express' -r='I 70' -r='CO 470' -r='E-470' colorado-latest-motorways.osm.gpkg
+./gpkg2ppm -o CO-motorways.edges -r='I 25' -r='I 25 Express' -r='I 70' -r='CO 470' -r='E-470' colorado-latest-motorways.osm.gpkg
 ```
 
 #### PPM2Geojson Command Line Options
@@ -160,7 +159,7 @@ To convert the above '.edges' file to geojson, copy the `CO-motorways.edges` fil
 ./ppm2geojson -i CO-motorways.edges -o CO-motorways.geojson -p
 ```
 
-To geojson file can then be edited, for example using QGIS, and then converted back to the '.edges' format with the following command:
+The geojson file can then be edited, for example using QGIS, and then converted back to the '.edges' format with the following command:
 
 ```bash
 ppm2geojson/bin/ppm2geojson -i CO-motorways.geojson -o CO-motorways-edited.edges -g

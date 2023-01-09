@@ -10,4 +10,4 @@
 # Build output
 build/
 bin/
-tmp/
+tmp*/
