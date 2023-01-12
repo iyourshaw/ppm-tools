@@ -47,7 +47,7 @@ dependencies {
 test {
     // Use JUnit Platform for unit tests.
     useJUnitPlatform()
-    finalizedBy jacocoTestReport    // Always generate coverate report after tests
+    finalizedBy jacocoTestReport    // Always generate coverage report after tests
 }
 
 jacocoTestReport {

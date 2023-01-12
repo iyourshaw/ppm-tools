@@ -2,6 +2,7 @@ package gov.codot.ppmtools.mapfile;
 
 import gov.codot.ppmtools.geojson.PpmLineFeature;
 import gov.codot.ppmtools.geojson.PpmLineProperties;
+import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 import org.locationtech.jts.geom.CoordinateXY;
@@ -22,8 +23,11 @@ import java.util.Comparator;
 @Setter
 public class PpmLine
     extends ArrayList<PpmEdge> {
-    
+
+    @Generated
     public String wayType;
+
+    @Generated
     public String wayId;
 
     public int getNumberOfEdges() {

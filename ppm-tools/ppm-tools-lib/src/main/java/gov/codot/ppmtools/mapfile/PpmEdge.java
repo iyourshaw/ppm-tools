@@ -1,5 +1,6 @@
 package gov.codot.ppmtools.mapfile;
 
+import lombok.Generated;
 import lombok.Getter;
 import lombok.Setter;
 import org.geotools.gml.producer.CoordinateFormatter;
@@ -14,9 +15,17 @@ import org.locationtech.jts.geom.CoordinateXY;
 @Getter
 @Setter
 public class PpmEdge {
+
+    @Generated
     String type = "edge";   // Default type is 'edge'
+
+    @Generated
     long id;
+
+    @Generated
     Geography geography = new Geography();
+
+    @Generated
     Attributes attributes = new Attributes();
 
     public static final String CSV_HEADER = "type,id,geography,attributes";
@@ -50,9 +59,17 @@ public class PpmEdge {
     @Getter
     @Setter
     public static class Geography {
+
+        @Generated
         long id1;
+
+        @Generated
         Coordinate coord1;
+
+        @Generated
         long id2;
+
+        @Generated
         Coordinate coord2;
 
         public static Geography parseGeography(String str) {
@@ -94,7 +111,11 @@ public class PpmEdge {
     @Getter
     @Setter
     public static class Attributes {
+
+        @Generated
         String wayType;
+
+        @Generated
         String wayId;
 
         @Override
