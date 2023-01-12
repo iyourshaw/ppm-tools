@@ -10,8 +10,8 @@ dependencies {
     api "org.geotools:gt-epsg-hsql:${geotoolsVersion}"
     api "org.geotools:gt-cql:${geotoolsVersion}"
     api "org.geotools:gt-xml:${geotoolsVersion}"
-    api "org.locationtech.jts:jts-core:1.18.2"
-    api "com.fasterxml.jackson.core:jackson-databind:2.13.3"
-    api "com.fasterxml.jackson.core:jackson-annotations:2.13.3"
+    api "org.locationtech.jts:jts-core:1.19.0"
+    api "com.fasterxml.jackson.core:jackson-databind:2.14.1"
+    api "com.fasterxml.jackson.core:jackson-annotations:2.14.1"
 }
 
