@@ -1,12 +1,24 @@
 package gov.codot.ppmtools;
 
 import org.junit.jupiter.api.Test;
+import picocli.CommandLine;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
 
-class Gpkg2PpmCommandTest {
-    @Test void appCanBeInstantiated() {
+
+
+public class Gpkg2PpmCommandTest {
+
+    @Test
+    public void appCanBeInstantiated() {
         var theApp = new Gpkg2PpmCommand();
-        assertNotNull(theApp, "Really ought to write some real tests for this.");
+        assertThat(theApp, notNullValue());
+    }
+
+    @Test
+    public void runCommandLine_NoParams() {
+        var exitCode = new CommandLine(new Gpkg2PpmCommand()).execute();
+        assertThat(exitCode, not(equalTo(0)));
     }
 }

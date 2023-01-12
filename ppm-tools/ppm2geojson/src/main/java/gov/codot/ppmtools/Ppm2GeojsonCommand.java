@@ -61,6 +61,11 @@ public class Ppm2GeojsonCommand implements Runnable {
             }
         } catch (Exception e) {
             e.printStackTrace();
+            if (e instanceof RuntimeException) {
+                throw (RuntimeException)e;
+            } else {
+                throw new RuntimeException(e);
+            }
         }
 
     }
@@ -71,9 +76,11 @@ public class Ppm2GeojsonCommand implements Runnable {
         String outExt = FilenameUtils.getExtension(outfile.getName()).toLowerCase();
         if (!"edges".equals(inExt)) {
             System.out.printf("Input file %s is not an '.edges' file.%n", infile.getName());
+            throw new RuntimeException();
         }
         if (!"geojson".equals(outExt)) {
             System.out.printf("Output file %s is not a '.geojson' file.%n", outfile.getName());
+            throw new RuntimeException();
         }
 
         PpmLineCollection lineCollection = PpmLineCollection.readMapFile(infile);
@@ -94,9 +101,11 @@ public class Ppm2GeojsonCommand implements Runnable {
         String outExt = FilenameUtils.getExtension(outfile.getName()).toLowerCase();
         if (!"geojson".equals(inExt)) {
             System.out.printf("Input file %s is not a '.geojson' file.%n", infile.getName());
+            throw new RuntimeException();
         }
         if (!"edges".equals(outExt)) {
             System.out.printf("Output file %s is not an '.edges' file.%n", outfile.getName());
+            throw new RuntimeException();
         }
 
         var geojson = PpmLineFeatureCollection.readGeojsonFile(infile);
