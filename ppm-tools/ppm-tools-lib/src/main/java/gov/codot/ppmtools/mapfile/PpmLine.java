@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 /**
- * An ordered list of contiguous PpmEdges, representinng one carriageway 
+ * An ordered list of contiguous PpmEdges, representing one carriageway
  * of a road.
  * 
  * The PpmEdges within the line are numbered with connected point UIDs.
@@ -78,7 +78,7 @@ public class PpmLine
         long id = startId;
         for (int i = 0; i < coords.length - 1; i++) {
             double[] coord1 = coords[i];
-            double[] coord2 = coords[i];
+            double[] coord2 = coords[i + 1];
             var x1 = coord1[0];
             var y1 = coord1[1];
             var x2 = coord2[0];
