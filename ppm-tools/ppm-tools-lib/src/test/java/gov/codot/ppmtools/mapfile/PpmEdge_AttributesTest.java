@@ -1,11 +1,13 @@
 package gov.codot.ppmtools.mapfile;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
@@ -25,6 +27,24 @@ public class PpmEdge_AttributesTest {
         assertThat(attribs, notNullValue());
         assertThat(attribs, hasProperty("wayType", equalTo(expectedType)));
         assertThat(attribs, hasProperty("wayId", equalTo(expectedId)));
+    }
+
+    @Test
+    public void parseAttributesTest_Null() {
+        assertThrows(RuntimeException.class,
+                () -> {
+                    PpmEdge.Attributes.parseAttributes(null);
+                }
+        );
+    }
+
+    @Test
+    public void parseAttributesTest_Invalid() {
+        assertThrows(RuntimeException.class,
+                () -> {
+                    PpmEdge.Attributes.parseAttributes("invalid1=x:invalid2=y");
+                }
+        );
     }
 
     @ParameterizedTest

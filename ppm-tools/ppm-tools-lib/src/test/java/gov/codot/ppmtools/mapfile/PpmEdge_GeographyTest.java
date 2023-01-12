@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 import org.locationtech.jts.geom.Coordinate;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
@@ -60,5 +61,23 @@ public class PpmEdge_GeographyTest {
         assertThat(coord1, hasProperty("y", closeTo(39.7239714, tolerance)));
         assertThat(coord2, hasProperty("x", closeTo(-105.1988367, tolerance)));
         assertThat(coord2, hasProperty("y", closeTo(39.7241547, tolerance)));
+    }
+
+    @Test
+    public void parseGeographyTest_Null() {
+        assertThrows(RuntimeException.class,
+                () -> {
+                    PpmEdge.Geography.parseGeography(null);
+                }
+        );
+    }
+
+    @Test
+    public void parseGeographyTest_Invalid() {
+        assertThrows(RuntimeException.class,
+                () -> {
+                    PpmEdge.Geography.parseGeography("0;0;0:1");
+                }
+        );
     }
 }

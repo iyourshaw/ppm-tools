@@ -1,8 +1,10 @@
 package gov.codot.ppmtools.mapfile;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import java.util.stream.Stream;
 
@@ -21,7 +23,27 @@ public class PpmEdgeTest {
         assertThat(edge, hasProperty("attributes", notNullValue()));
         assertThat(edge.getAttributes(), hasProperty("wayType", equalTo(expectedWayType)));
         assertThat(edge, hasProperty("geography", notNullValue()));
+        assertThat("getCsv", edge.getCsv(), equalTo(csv));
     }
+
+    @Test
+    public void parseCsvTest_Null() {
+        assertThrows(RuntimeException.class,
+                () -> {
+                    PpmEdge.parseCsv(null);
+                }
+        );
+    }
+
+    @Test
+    public void parseCsvTest_InvalidCsv() {
+        assertThrows(RuntimeException.class,
+                () -> {
+                    PpmEdge.parseCsv("csv,has,too,many,parts");
+                });
+    }
+
+
 
 
 

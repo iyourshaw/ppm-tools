@@ -18,8 +18,13 @@ tmp*/
 *.edges
 *.geojson
 
-# Don't exclude example geospatial files in data folder
+# Don't exclude example/test geospatial files in data or resources folders
 !/data/*.pbf
 !/data/*.edges
 !/data/*.gpkg
+!/data/*.geojson
+!**/resources/*.pbf
+!**/resources/*.edges
+!**/resources/*.gpkg
+!**/resources/*.geojson
 
