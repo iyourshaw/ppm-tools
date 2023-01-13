@@ -7,3 +7,4 @@
 *.zip binary
 *.gpkg binary
 *.bat binary
+*.pbf binary

@@ -166,4 +166,10 @@ ppm2geojson/bin/ppm2geojson -i CO-motorways.geojson -o CO-motorways-edited.edges
 ```
 
 ## Unit Tests
-TODO Document unit tests and coverage statistics.
+Unit tests are provided for each of the projects.  After building, Jacoco test coverage reports are available in the `build/reports/jacoco/test/html` folder for each project.
+
+Unit test coverage is as follows:
+
+* `ppm-tools-lib` - 95%
+* `gpkg2ppm` - 91%
+* `ppm2geojson` - 86%
