@@ -45,10 +45,7 @@ public class PpmLine
         var props = new PpmLineProperties();
         props.setWayType(wayType);
         props.setWayId(wayId);
-        long minId = this.stream()
-                        .map(edge -> edge.getGeography().getId1()).min(Comparator.comparingLong(i -> i))
-                        .orElseThrow();
-        long maxId = maxId();
+
 
         var coords = new ArrayList<double[]>();
         PpmEdge firstEdge = this.get(0);
