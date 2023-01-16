@@ -5,19 +5,18 @@ import gov.codot.ppmtools.mapfile.PpmLineCollection;
 import org.apache.commons.io.FilenameUtils;
 import picocli.CommandLine;
 import picocli.CommandLine.Command;
-import picocli.CommandLine.Parameters;
 import picocli.CommandLine.Option;
 import picocli.CommandLine.ArgGroup;
 
 import java.io.*;
-import java.nio.file.Files;
-import java.util.Locale;
+
 
 @Command(name = "ppm2geojson", description = "Converts between ODE PPM 'edges' files and Geojson")
 public class Ppm2GeojsonCommand implements Runnable {
 
     public static void main(String... args) throws Exception {
         var exitCode = new CommandLine(new Ppm2GeojsonCommand()).execute(args);
+        System.exit(exitCode);
     }
 
     @ArgGroup(exclusive = true, multiplicity = "1", heading = "Conversion Direction\n")

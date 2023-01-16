@@ -1,8 +1,6 @@
 package org.wololo.geojson;
 
 import org.junit.jupiter.api.Test;
-import org.wololo.geojson.GeoJSONFactory;
-import org.wololo.geojson.Point;
 import org.wololo.geojson.examples.ExamplePojoFeature;
 import org.wololo.geojson.examples.ExamplePojoFeatureCollection;
 import org.wololo.geojson.examples.ExamplePojoProperties;

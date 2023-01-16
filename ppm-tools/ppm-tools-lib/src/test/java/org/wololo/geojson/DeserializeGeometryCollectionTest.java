@@ -2,9 +2,6 @@ package org.wololo.geojson;
 
 
 import org.junit.jupiter.api.Test;
-import org.wololo.geojson.GeoJSONFactory;
-import org.wololo.geojson.GeometryCollection;
-import org.wololo.geojson.Point;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;

@@ -4,15 +4,11 @@ import gov.codot.ppmtools.geojson.PpmLineFeature;
 import gov.codot.ppmtools.geojson.PpmLineProperties;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.locationtech.jts.geom.Coordinate;
 import org.locationtech.jts.geom.CoordinateXY;
-import org.locationtech.jts.geom.GeometryFactory;
 import org.wololo.geojson.LineString;
-
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
-import static org.hamcrest.Matchers.notNullValue;
 
 public class PpmLineTest {
 

@@ -2,7 +2,6 @@ package org.wololo.geojson;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
-import org.wololo.geojson.*;
 
 import java.util.HashMap;
 

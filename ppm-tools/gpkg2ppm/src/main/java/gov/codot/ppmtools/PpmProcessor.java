@@ -1,21 +1,11 @@
 package gov.codot.ppmtools;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.TreeMap;
-import java.util.stream.Collectors;
-
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.ListMultimap;
 import com.google.common.collect.Sets;
-
+import gov.codot.ppmtools.mapfile.PpmEdge;
+import gov.codot.ppmtools.mapfile.PpmLine;
+import gov.codot.ppmtools.mapfile.PpmLineCollection;
 import org.geotools.data.simple.SimpleFeatureCollection;
 import org.geotools.data.simple.SimpleFeatureIterator;
 import org.geotools.feature.simple.SimpleFeatureBuilder;
@@ -31,9 +21,10 @@ import org.opengis.feature.Feature;
 import org.opengis.feature.Property;
 import org.opengis.feature.simple.SimpleFeatureType;
 
-import gov.codot.ppmtools.mapfile.PpmEdge;
-import gov.codot.ppmtools.mapfile.PpmLine;
-import gov.codot.ppmtools.mapfile.PpmLineCollection;
+import java.io.File;
+import java.io.IOException;
+import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Methods for extracting Open Street Map line features contained in a 

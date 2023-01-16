@@ -3,7 +3,6 @@ package gov.codot.ppmtools.mapfile;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import gov.codot.ppmtools.geojson.PpmLineFeatureCollection;
-import org.apache.commons.io.Charsets;
 import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.Test;
 

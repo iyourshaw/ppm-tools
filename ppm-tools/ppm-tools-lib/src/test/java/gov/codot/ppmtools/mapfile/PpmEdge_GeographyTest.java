@@ -10,7 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.*;
 
 /**
- * Tests for {@PpmEdge.Geography}
+ * Tests for {@link PpmEdge.Geography}
  */
 public class PpmEdge_GeographyTest {
     
