@@ -98,13 +98,13 @@ From within the `ppm-tools/ppm-tools` directory, build the tools using Gradle:
 ```
 
 ### Running the gpkg2ppm command line tool
-Use the downloaded zip file, or locate the `gpkg2ppm.zip` or `gpkg2ppm.tar` file in the ppm-tools/ppm-tools/gpkg2ppm/build/distributions folder, unzip or untar it, and within the unzipped directory structure, in the `bin` folder, run:
+Locate the `gpkg2ppm.zip` or `gpkg2ppm.tar` file in the ppm-tools/ppm-tools/gpkg2ppm/build/distributions folder, unzip or untar it, and within the unzipped directory structure, in the `bin` folder, run:
 ```bash
 ./gpkg2ppm <options> <infile>
 ```
 
 ### Running the ppm2geojson command line tool
-Use the downloaded zip file, or locate the `ppm2geojson.zip` or `ppm2geojson.tar` file in the ppm-tools/ppm-tools/ppm2geojson/build/distrubitions flder, unzip of untar it, and within the uzippeed directory structure, in the `bin` folder, run:
+Locate the `ppm2geojson.zip` or `ppm2geojson.tar` file in the ppm-tools/ppm-tools/ppm2geojson/build/distrubitions flder, unzip of untar it, and within the uzippeed directory structure, in the `bin` folder, run:
 ```bash
 ./ppm2geojson -i infile -o outfile <options>
 ```
